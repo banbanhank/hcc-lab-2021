@@ -26,8 +26,8 @@ void listener(){
          * Please uncomment the code below
          */
 
-        // string parent_id = "map_tag_0";
-        // string child_id = "map_tag_" + std::to_string(i);
+        string parent_id = "map_tag_0";
+        string child_id = "map_tag_" + std::to_string(i);
         /* ============================================================================== */
 
         /**
