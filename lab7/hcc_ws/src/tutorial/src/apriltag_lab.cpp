@@ -14,7 +14,8 @@ using namespace std;
 tf::StampedTransform echo_transform;
 tf::TransformListener *tf_listener;
 tf::StampedTransform min_distance_trans;
-std::pair<int, double> min_distance (-1,100.0);
+int id;
+double min_distance;
 
 
 void listener(){
@@ -74,11 +75,6 @@ void listener(){
             /*
               find the closet distance from the tag to camera_link (remember to modify the parent_id).  //
             */
-            // Hint: 
-            // min_distance.second = dist;
-            // ...
-            // more detail: http://www.cplusplus.com/reference/utility/pair/
-
             /************************************************************** 
             //                                                           //
             //                                                           //
@@ -100,7 +96,7 @@ void listener(){
         Please uncomment the code below.
     */
     // string parent_id = "map_tag_0";
-    // string child_id = "map_tag_" + std::to_string(min_distance.first);
+    // string child_id = "map_tag_" + std::to_string(id);
     // tf_listener->waitForTransform(child_id, parent_id, ros::Time::now(), ros::Duration(0.001));
     // try {
 
