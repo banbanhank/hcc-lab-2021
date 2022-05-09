@@ -53,7 +53,8 @@ class MyServer
       cv::cvtColor(frame, frame_gray, CV_BGR2GRAY);
       cv::equalizeHist(frame_gray, frame_gray);
       // Detect faces
-      face_cascade_.detectMultiScale(frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+      // face_cascade_.detectMultiScale(frame_gray, faces, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+      face_cascade_.detectMultiScale(frame_gray, faces, 1.1, 2, 0|cv::CASCADE_SCALE_IMAGE, cv::Size(30, 30));
       // Draw circles to bounded the detected faces
       for (size_t i = 0; i < faces.size(); ++i){
         cv::Point center(faces[i].x + faces[i].width * 0.5, faces[i].y + faces[i].height * 0.5);
